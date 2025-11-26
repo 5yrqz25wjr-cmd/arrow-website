@@ -1,51 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Arrow | Startup Matchmaking</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body data-page="feed">
-  <div class="page-shell">
-    <header class="top-bar">
-      <div class="logo">
-        <div class="logo-icon">▶</div>
-        <span class="logo-text">Arrow</span>
+<main class="main-content">
+  <section class="hero-block hero-landing">
+    <div class="hero-text">
+      <p class="hero-tag">Arrow · Startup Matchmaking</p>
+      <h1>Smart intros between founders &amp; investors</h1>
+      <p class="hero-subtitle">
+        Upload a short video pitch, set your target equity, and let investors
+        discover you. No endless decks, just clear intros.
+      </p>
+    </div>
+
+    <div class="hero-controls">
+      <div class="search-row">
+        <input
+          id="search-input"
+          type="text"
+          placeholder="Search pitch, founder, or sector..."
+        />
       </div>
 
-      <nav class="nav-tabs">
-        <a href="index.html" class="nav-tab nav-tab-active">Feed</a>
-        <a href="new-pitch.html" class="nav-tab">New Pitch</a>
-        <a href="settings.html" class="nav-tab">Settings</a>
-      </nav>
-    </header>
+      <div class="hero-cta-row">
+        <a href="new-pitch.html" class="btn-primary">Create a pitch</a>
+        <a href="settings.html" class="btn-ghost">I’m an investor</a>
+      </div>
 
-    <main class="main-content">
-      <section class="hero-block">
-        <h1 class="page-title">Smart intros between founders &amp; investors</h1>
-
-        <div class="search-row">
-          <input
-            id="search-input"
-            type="text"
-            class="search-input"
-            placeholder="Search pitch, founder, or sector..."
-          />
-        </div>
-
-        <div class="meta-row">
-          <span id="pitch-count">0 pitches</span>
-          <span id="lead-count">0 leads</span>
-        </div>
-      </section>
-
-      <section class="feed-list" id="pitch-list">
-        <!-- Cards injected by script.js -->
-      </section>
-    </main>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
-
+      <div class="stats-row">
+        <span id="pitch-count">0 pitches</span>
+        <span id="lead-count">0 leads</span>
+      </div>
+    </div>
+  </section>
