@@ -3,10 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <title>Arrow | Startup Matchmaking</title>
-  <!-- Redirect straight to the Feed page -->
-  <meta http-equiv="refresh" content="0; url=feed.html" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body style="background:#050509; color:white; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
-  <p>Redirecting to <a href="feed.html" style="color:#b38cff;">Feed</a>…</p>
+<body data-page="feed">
+  <div class="page-shell">
+    <header class="top-bar">
+      <div class="logo">
+        <div class="logo-icon">▶</div>
+        <span class="logo-text">Arrow</span>
+      </div>
+
+      <nav class="nav-tabs">
+        <a href="index.html" class="nav-tab nav-tab-active">Feed</a>
+        <a href="new-pitch.html" class="nav-tab">New Pitch</a>
+        <a href="settings.html" class="nav-tab">Settings</a>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section class="hero-block">
+        <h1 class="page-title">Smart intros between founders &amp; investors</h1>
+
+        <div class="search-row">
+          <input
+            id="search-input"
+            type="text"
+            class="search-input"
+            placeholder="Search pitch, founder, or sector..."
+          />
+        </div>
+
+        <div class="meta-row">
+          <span id="pitch-count">0 pitches</span>
+          <span id="lead-count">0 leads</span>
+        </div>
+      </section>
+
+      <section class="feed-list" id="pitch-list">
+        <!-- Cards injected by script.js -->
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
