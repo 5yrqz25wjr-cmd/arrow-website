@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Arrow | Settings</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="settings">
+  <div class="page-shell">
+    <header class="top-bar">
+      <div class="logo">
+        <div class="logo-icon">▶</div>
+        <span class="logo-text">Arrow</span>
+      </div>
+
+      <nav class="nav-tabs">
+        <a href="index.html" class="nav-tab">Feed</a>
+        <a href="new-pitch.html" class="nav-tab">New Pitch</a>
+        <a href="settings.html" class="nav-tab nav-tab-active">Settings</a>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section class="hero-block">
+        <h1 class="page-title">Settings</h1>
+        <p class="page-subtitle">
+          Simple local settings — just for this prototype.
+        </p>
+      </section>
+
+      <section class="settings-grid">
+        <!-- Role card -->
+        <div class="card">
+          <h2 class="card-title">Role</h2>
+          <p class="card-subtitle">
+            Choose how you mostly use Arrow.
+          </p>
+
+          <div class="role-toggle">
+            <label class="role-option">
+              <input
+                type="radio"
+                name="role"
+                value="Founder"
+                id="role-founder"
+              />
+              <span>Founder</span>
+            </label>
+
+            <label class="role-option">
+              <input
+                type="radio"
+                name="role"
+                value="Investor"
+                id="role-investor"
+              />
+              <span>Investor</span>
+            </label>
+          </div>
+
+          <p class="card-footer-text">
+            We'll use this later to personalize what you see.
+          </p>
+        </div>
+
+        <!-- Demo data card -->
+        <div class="card">
+          <h2 class="card-title">Demo Data</h2>
+          <p class="card-subtitle">
+            Reset or seed demo pitches in your local browser.
+          </p>
+
+          <div class="settings-actions">
+            <button id="seed-demo-btn" class="btn btn-primary">
+              Seed Demo Pitches
+            </button>
+            <button id="wipe-data-btn" class="btn btn-danger">
+              Wipe All Local Pitches
+            </button>
+          </div>
+
+          <p class="card-footer-text">
+            This does not talk to any real server. Everything stays on this
+            device.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

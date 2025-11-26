@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Arrow | New Pitch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="new">
+  <div class="page-shell">
+    <header class="top-bar">
+      <div class="logo">
+        <div class="logo-icon">▶</div>
+        <span class="logo-text">Arrow</span>
+      </div>
+
+      <nav class="nav-tabs">
+        <a href="index.html" class="nav-tab">Feed</a>
+        <a href="new-pitch.html" class="nav-tab nav-tab-active">New Pitch</a>
+        <a href="settings.html" class="nav-tab">Settings</a>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section class="hero-block">
+        <h1 class="page-title">New Pitch</h1>
+        <p class="page-subtitle">
+          Quick demo form — later this can submit to your real backend.
+        </p>
+      </section>
+
+      <section class="card card-wide">
+        <form id="new-pitch-form" class="form-grid">
+          <div class="form-field">
+            <label for="title">Title</label>
+            <input id="title" name="title" type="text" required />
+          </div>
+
+          <div class="form-field">
+            <label for="founder">Founder Name</label>
+            <input id="founder" name="founder" type="text" required />
+          </div>
+
+          <div class="form-field">
+            <label for="sector">Sector (e.g., Fintech, Health, EdTech)</label>
+            <input id="sector" name="sector" type="text" required />
+          </div>
+
+          <div class="form-field">
+            <label for="region">Region (e.g., NY, CA, EU)</label>
+            <input id="region" name="region" type="text" required />
+          </div>
+
+          <div class="form-field">
+            <label for="equity">Equity %</label>
+            <input
+              id="equity"
+              name="equity"
+              type="number"
+              min="0"
+              max="100"
+              step="0.1"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="videoUrl">Demo video URL (optional)</label>
+            <input
+              id="videoUrl"
+              name="videoUrl"
+              type="url"
+              placeholder="https://…"
+            />
+          </div>
+
+          <div class="form-field form-field-span-2">
+            <label for="summary">Summary</label>
+            <textarea
+              id="summary"
+              name="summary"
+              rows="4"
+              placeholder="Short one-liner about the startup…"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-actions form-field-span-2">
+            <button type="submit" class="btn btn-primary">
+              Add to Feed (local only)
+            </button>
+            <span class="form-hint">
+              Saved in your browser only — this doesn't talk to any server.
+            </span>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
