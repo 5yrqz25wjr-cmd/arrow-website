@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Arrow | Founder Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="founder.html">
+  <header class="top-nav">
+    <div class="nav-left">
+      <a href="index.html" class="brand-pill">
+        <span class="brand-icon">▶</span>
+        <span class="brand-name">Arrow</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-tab">Feed</a>
+        <a href="new-pitch.html" class="nav-tab">New Pitch</a>
+        <a href="settings.html" class="nav-tab">Settings</a>
+      </nav>
+    </div>
+    <div class="nav-right">
+      <span id="user-chip" class="user-chip" style="display:none;"></span>
+      <button class="btn-ghost" onclick="handleLogout()">Logout</button>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-header">
+      <h1 class="page-title">Founder dashboard</h1>
+      <p class="page-subtitle">
+        Create and manage your pitches. (We can add more founder-only tools here later.)
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Your next steps</h2>
+      <ul class="simple-list">
+        <li>Create a <a href="new-pitch.html">new pitch</a></li>
+        <li>Edit your profile in <a href="settings.html">Settings</a></li>
+        <li>Check the <a href="index.html">feed</a> to see how your pitch appears</li>
+      </ul>
+    </section>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

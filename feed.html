@@ -1,41 +1,55 @@
+
+<script type="module" src="script.js"></script>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Arrow | Startup Matchmaking</title>
+  <title>Arrow | Feed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body data-page="feed">
   <div class="page-shell">
     <header class="top-bar">
-      <div class="logo">
+      <a href="index.html" class="logo">
         <div class="logo-icon">▶</div>
         <span class="logo-text">Arrow</span>
-      </div>
+      </a>
 
       <nav class="nav-tabs">
         <a href="index.html" class="nav-tab nav-tab-active">Feed</a>
         <a href="new-pitch.html" class="nav-tab">New Pitch</a>
         <a href="settings.html" class="nav-tab">Settings</a>
       </nav>
+
+      <a id="nav-user-pill" href="login.html" class="user-pill">Log in</a>
     </header>
 
     <main class="main-content">
-      <section class="hero-block">
-        <h1 class="page-title">Smart intros between founders &amp; investors</h1>
-
-        <div class="search-row">
-          <input
-            id="search-input"
-            type="text"
-            class="search-input"
-            placeholder="Search pitch, founder, or sector..."
-          />
+      <section class="hero-block hero-landing">
+        <div class="hero-text">
+          <p class="hero-tag">Arrow · Startup Matchmaking</p>
+          <h1 class="page-title">Smart intros between founders &amp; investors</h1>
+          <p class="hero-subtitle">
+            Upload a short video pitch, set your target equity, and let investors discover you.
+            No endless decks, just clear intros.
+          </p>
         </div>
 
-        <div class="meta-row">
-          <span id="pitch-count">0 pitches</span>
-          <span id="lead-count">0 leads</span>
+        <div class="hero-controls">
+          <div class="search-row">
+            <input
+              id="search-input"
+              class="search-input"
+              type="text"
+              placeholder="Search pitch, founder, or sector..."
+            />
+          </div>
+          <div class="meta-row">
+            <span><span id="pitch-count">0</span> pitches</span>
+            <span><span id="lead-count">0</span> leads</span>
+          </div>
         </div>
       </section>
 
@@ -45,6 +59,6 @@
     </main>
   </div>
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>

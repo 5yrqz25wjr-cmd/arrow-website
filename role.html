@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Arrow | Feed</title>
+  <title>Arrow | Choose Role</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body data-page="index.html">
+<body data-page="role.html">
   <header class="top-nav">
     <div class="nav-left">
       <a href="launch.html" class="brand-pill">
@@ -13,7 +13,7 @@
         <span class="brand-name">Arrow</span>
       </a>
       <nav class="main-nav">
-        <a href="index.html" class="nav-tab nav-tab-active">Feed</a>
+        <a href="index.html" class="nav-tab">Feed</a>
         <a href="new-pitch.html" class="nav-tab">New Pitch</a>
         <a href="settings.html" class="nav-tab">Settings</a>
       </nav>
@@ -25,10 +25,23 @@
   </header>
 
   <main class="page-shell">
-    <h1 class="page-title">Smart intros between founders &amp; investors</h1>
+    <section class="center-card">
+      <h1 class="page-title">How will you use Arrow?</h1>
+      <p class="page-subtitle">
+        Choose a primary role. You can still browse everything later.
+      </p>
 
-    <section class="feed-section">
-      <div id="pitch-list" class="pitch-list"></div>
+      <div class="role-grid">
+        <button id="choose-founder" class="role-card">
+          <h2>Founder</h2>
+          <p>Share your startup, connect with aligned investors.</p>
+        </button>
+
+        <button id="choose-investor" class="role-card">
+          <h2>Investor</h2>
+          <p>Discover curated deals from founders.</p>
+        </button>
+      </div>
     </section>
   </main>
 

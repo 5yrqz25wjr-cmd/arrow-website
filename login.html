@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Arrow | Log in</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="login.html">
+  <header class="top-nav">
+    <div class="nav-left">
+      <a href="launch.html" class="brand-pill">
+        <span class="brand-icon">▶</span>
+        <span class="brand-name">Arrow</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-tab">Feed</a>
+        <a href="new-pitch.html" class="nav-tab">New Pitch</a>
+        <a href="settings.html" class="nav-tab">Settings</a>
+      </nav>
+    </div>
+    <div class="nav-right">
+      <span id="user-chip" class="user-chip" style="display:none;"></span>
+      <a id="login-link" href="login.html" class="btn-ghost">Log in</a>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="center-card auth-card">
+      <h1 class="page-title">Sign in</h1>
+      <p class="page-subtitle">
+        Use your email and password. Accounts are stored in Firebase Authentication.
+      </p>
+
+      <form id="login-form" class="form-vertical">
+        <label class="field-label" for="login-email">Email</label>
+        <input
+          id="login-email"
+          type="email"
+          autocomplete="email"
+          required
+          class="field-input"
+        />
+
+        <label class="field-label" for="login-password">Password</label>
+        <input
+          id="login-password"
+          type="password"
+          autocomplete="current-password"
+          required
+          class="field-input"
+        />
+
+        <div class="form-actions">
+          <button type="button" id="sign-in-btn" class="btn-primary">
+            Sign in
+          </button>
+          <button type="button" id="sign-up-btn" class="btn-secondary">
+            Sign up
+          </button>
+        </div>
+
+        <button
+          type="button"
+          id="reset-password-link"
+          class="link-button"
+        >
+          Forgot your password?
+        </button>
+
+        <div id="login-message" class="small-note"></div>
+      </form>
+    </section>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
