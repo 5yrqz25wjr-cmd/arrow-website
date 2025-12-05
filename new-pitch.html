@@ -1,57 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Arrow | New Pitch</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body data-page="new-pitch.html">
-  <header class="top-nav">
-    <div class="nav-left">
-      <a href="launch.html" class="brand-pill">
-        <span class="brand-icon">▶</span>
-        <span class="brand-name">Arrow</span>
-      </a>
-      <nav class="main-nav">
+  <head>
+    <meta charset="utf-8" />
+    <title>Arrow | New Pitch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="new-pitch.html">
+    <header class="top-nav">
+      <a href="index.html" class="logo">Arrow</a>
+      <nav class="nav-tabs">
         <a href="index.html" class="nav-tab">Feed</a>
-        <a href="new-pitch.html" class="nav-tab nav-tab-active">New Pitch</a>
+        <a href="new-pitch.html" class="nav-tab active">New Pitch</a>
         <a href="settings.html" class="nav-tab">Settings</a>
       </nav>
-    </div>
-    <div class="nav-right">
-      <span id="user-chip" class="user-chip" style="display:none;"></span>
-      <a id="login-link" href="login.html" class="btn-ghost">Log in</a>
-    </div>
-  </header>
+      <nav class="nav-links">
+        <a id="login-link" href="login.html" class="nav-button">Log in</a>
+        <button id="user-chip" class="user-chip" style="display: none"></button>
+      </nav>
+    </header>
 
-  <main class="page-shell">
-    <section class="center-card">
-      <h1 class="page-title">Create a new pitch</h1>
+    <main class="page page-new-pitch">
+      <section class="card card-wide">
+        <h1>Create a new pitch</h1>
 
-      <form id="new-pitch-form" class="form-vertical">
-        <label class="field-label" for="title">Title</label>
-        <input id="title" name="title" class="field-input" required />
+        <form id="new-pitch-form" class="pitch-form">
+          <label>
+            Title
+            <input name="title" type="text" required />
+          </label>
 
-        <label class="field-label" for="founder">Founder</label>
-        <input id="founder" name="founder" class="field-input" required />
+          <label>
+            Founder
+            <input name="founder" type="text" required />
+          </label>
 
-        <label class="field-label" for="sector">Sector</label>
-        <input id="sector" name="sector" class="field-input" />
+          <label>
+            Sector
+            <input name="sector" type="text" />
+          </label>
 
-        <label class="field-label" for="location">Location</label>
-        <input id="location" name="location" class="field-input" />
+          <label>
+            Location
+            <input name="location" type="text" />
+          </label>
 
-        <label class="field-label" for="equity">Equity offered</label>
-        <input id="equity" name="equity" class="field-input" placeholder="e.g., 8.0%" />
+          <label>
+            Equity offered
+            <input
+              name="equity"
+              type="text"
+              placeholder="e.g., 8.0%"
+            />
+          </label>
 
-        <label class="field-label" for="summary">Summary</label>
-        <textarea id="summary" name="summary" rows="4" class="field-input"></textarea>
+          <label>
+            Summary
+            <textarea
+              name="summary"
+              rows="5"
+              placeholder="Explain the problem, solution, and why it’s exciting."
+            ></textarea>
+          </label>
 
-        <button type="submit" class="btn-primary wide-btn">Create pitch</button>
-      </form>
-    </section>
-  </main>
+          <button type="submit" class="btn btn-primary full-width">
+            Create pitch
+          </button>
+        </form>
+      </section>
+    </main>
 
-  <script type="module" src="script.js"></script>
-</body>
+    <script type="module" src="script.js"></script>
+  </body>
 </html>

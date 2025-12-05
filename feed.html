@@ -1,64 +1,94 @@
-
-<script type="module" src="script.js"></script>
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Arrow | Feed</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body data-page="feed">
-  <div class="page-shell">
-    <header class="top-bar">
-      <a href="index.html" class="logo">
-        <div class="logo-icon">▶</div>
-        <span class="logo-text">Arrow</span>
-      </a>
-
-      <nav class="nav-tabs">
-        <a href="index.html" class="nav-tab nav-tab-active">Feed</a>
-        <a href="new-pitch.html" class="nav-tab">New Pitch</a>
-        <a href="settings.html" class="nav-tab">Settings</a>
-      </nav>
-
-      <a id="nav-user-pill" href="login.html" class="user-pill">Log in</a>
-    </header>
-
-    <main class="main-content">
-      <section class="hero-block hero-landing">
-        <div class="hero-text">
-          <p class="hero-tag">Arrow · Startup Matchmaking</p>
-          <h1 class="page-title">Smart intros between founders &amp; investors</h1>
-          <p class="hero-subtitle">
-            Upload a short video pitch, set your target equity, and let investors discover you.
-            No endless decks, just clear intros.
-          </p>
-        </div>
-
-        <div class="hero-controls">
-          <div class="search-row">
-            <input
-              id="search-input"
-              class="search-input"
-              type="text"
-              placeholder="Search pitch, founder, or sector..."
-            />
-          </div>
-          <div class="meta-row">
-            <span><span id="pitch-count">0</span> pitches</span>
-            <span><span id="lead-count">0</span> leads</span>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Arrow – Deal Feed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="index.html">
+    <div class="page-shell">
+      <!-- Top bar / nav -->
+      <header class="top-bar">
+        <div class="logo">
+          <div class="logo-icon">A</div>
+          <div>
+            <div class="logo-text">Arrow</div>
+            <div style="font-size: 12px; color: #a5a3c5">
+              Warm intros for founders & investors
+            </div>
           </div>
         </div>
-      </section>
 
-      <section class="feed-list" id="pitch-list">
-        <!-- Cards injected by script.js -->
-      </section>
-    </main>
-  </div>
+        <nav class="nav-tabs">
+          <a href="index.html" class="nav-tab nav-tab-active">Feed</a>
+          <a href="new-pitch.html" class="nav-tab">New Pitch</a>
+          <a href="inbox.html" class="nav-tab">Inbox</a>
+          <a href="settings.html" class="nav-tab">Settings</a>
+        </nav>
 
-  <script type="module" src="script.js"></script>
-</body>
+        <div style="display: flex; align-items: center; gap: 10px">
+          <span
+            id="user-chip"
+            style="
+              display: none;
+              font-size: 13px;
+              padding: 6px 12px;
+              border-radius: 999px;
+              background: rgba(255, 255, 255, 0.06);
+            "
+          >
+            Hi, user
+          </span>
+          <a
+            id="login-link"
+            href="login.html"
+            class="nav-tab"
+            style="padding: 6px 16px; font-size: 13px"
+          >
+            Log in
+          </a>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <!-- Hero -->
+        <section class="hero-block hero-landing">
+          <div class="hero-text">
+            <div class="hero-tag">Curated deal flow</div>
+            <h1 class="page-title">Arrow deal feed</h1>
+            <p class="hero-subtitle">
+              Short, video-first pitches from early-stage founders. Click
+              <strong>“I’m interested”</strong> and we’ll open a private thread
+              with the founder in your inbox.
+            </p>
+          </div>
+
+          <div class="hero-controls">
+            <div class="search-row card-wide">
+              <input
+                id="search-input"
+                class="search-input"
+                type="search"
+                placeholder="Search by title, founder, sector, or region"
+              />
+              <div class="meta-row">
+                <span id="feed-meta-count">0 live pitches</span>
+                <span id="feed-meta-role"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Feed list -->
+        <section>
+          <div id="pitch-list" class="feed-list">
+            <!-- Cards rendered by script.js -->
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
 </html>

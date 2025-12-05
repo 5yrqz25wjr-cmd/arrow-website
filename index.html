@@ -1,37 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Arrow | Feed</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body data-page="index.html">
-  <header class="top-nav">
-    <div class="nav-left">
-      <a href="launch.html" class="brand-pill">
-        <span class="brand-icon">▶</span>
-        <span class="brand-name">Arrow</span>
+  <head>
+    <meta charset="utf-8" />
+    <title>Arrow | Feed</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="index.html">
+    <header class="top-nav">
+      <a href="index.html" class="logo-chip">
+        <span class="logo-dot"></span>
+        <span>Arrow</span>
       </a>
-      <nav class="main-nav">
-        <a href="index.html" class="nav-tab nav-tab-active">Feed</a>
-        <a href="new-pitch.html" class="nav-tab">New Pitch</a>
-        <a href="settings.html" class="nav-tab">Settings</a>
+
+      <nav class="top-nav-links">
+        <a href="index.html" class="nav-link nav-link--active">Feed</a>
+        <a href="new-pitch.html" class="nav-link">New Pitch</a>
+        <a href="settings.html" class="nav-link">Settings</a>
       </nav>
-    </div>
-    <div class="nav-right">
-      <span id="user-chip" class="user-chip" style="display:none;"></span>
-      <a id="login-link" href="login.html" class="btn-ghost">Log in</a>
-    </div>
-  </header>
 
-  <main class="page-shell">
-    <h1 class="page-title">Smart intros between founders &amp; investors</h1>
+      <div class="top-nav-right">
+        <a id="login-link" href="login.html" class="pill-button pill-button--ghost">
+          Log in
+        </a>
+        <div id="user-chip" class="user-chip" style="display:none;"></div>
+      </div>
+    </header>
 
-    <section class="feed-section">
-      <div id="pitch-list" class="pitch-list"></div>
-    </section>
-  </main>
+    <main class="page-shell">
+      <section class="page-hero">
+        <p id="role-banner" class="role-banner">
+          Smart intros between founders &amp; investors
+        </p>
+        <h1>Smart intros between founders &amp; investors</h1>
+      </section>
 
-  <script type="module" src="script.js"></script>
-</body>
+      <section class="feed-section">
+        <div id="pitch-list" class="pitch-list">
+          <!-- cards inserted by script.js -->
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
 </html>

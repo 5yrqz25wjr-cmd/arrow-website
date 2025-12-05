@@ -1,58 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Arrow | Settings</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body data-page="settings.html">
-  <header class="top-nav">
-    <div class="nav-left">
-      <a href="launch.html" class="brand-pill">
-        <span class="brand-icon">▶</span>
-        <span class="brand-name">Arrow</span>
+  <head>
+    <meta charset="utf-8" />
+    <title>Arrow | Settings & Profile</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="settings.html">
+    <header class="top-nav">
+      <a href="index.html" class="logo-chip">
+        <span class="logo-dot"></span>
+        <span>Arrow</span>
       </a>
-      <nav class="main-nav">
-        <a href="index.html" class="nav-tab">Feed</a>
-        <a href="new-pitch.html" class="nav-tab">New Pitch</a>
-        <a href="settings.html" class="nav-tab nav-tab-active">Settings</a>
+
+      <nav class="top-nav-links">
+        <a href="index.html" class="nav-link">Feed</a>
+        <a href="new-pitch.html" class="nav-link">New Pitch</a>
+        <a href="settings.html" class="nav-link nav-link--active">Settings</a>
       </nav>
-    </div>
-    <div class="nav-right">
-      <span id="user-chip" class="user-chip" style="display:none;"></span>
-      <a id="login-link" href="login.html" class="btn-ghost">Log in</a>
-    </div>
-  </header>
 
-  <main class="page-shell">
-    <section class="settings-grid">
-      <article class="settings-card">
-        <h2>Role</h2>
-        <p>Change how you mostly use Arrow.</p>
-        <div class="button-row">
-          <a href="role.html" class="btn-secondary">Choose role</a>
-        </div>
-      </article>
+      <div class="top-nav-right">
+        <a id="login-link" href="login.html" class="pill-button pill-button--ghost">
+          Log in
+        </a>
+        <div id="user-chip" class="user-chip" style="display:none;"></div>
+      </div>
+    </header>
 
-      <article class="settings-card">
-        <h2>Demo Data</h2>
-        <p>Seed or remove demo pitches.</p>
-        <div class="button-row">
-          <button id="seed-demo" class="btn-primary">Seed Demo Pitches</button>
-          <button id="wipe-demo" class="btn-danger">Wipe Local Data</button>
-        </div>
-      </article>
+    <main class="page-shell">
+      <h1 class="page-title">Settings &amp; Profile</h1>
 
-      <article class="settings-card">
-        <h2>Account</h2>
-        <p>Sign out of your Arrow account.</p>
-        <div class="button-row">
-          <button onclick="handleLogout()" class="btn-ghost">Log out</button>
-        </div>
-      </article>
-    </section>
-  </main>
+      <div class="settings-grid">
+        <!-- Role & access -->
+        <section class="card settings-card">
+          <h2>Role &amp; Access</h2>
+          <p class="card-subtitle">
+            Choose whether you’re using Arrow as an investor or a founder.
+            This controls what you can do in the app.
+          </p>
 
-  <script type="module" src="script.js"></script>
-</body>
+          <div class="role-options">
+            <label class="radio-pill">
+              <input
+                type="radio"
+                name="role"
+                id="role-investor"
+                value="investor"
+              />
+              <span>Investor</span>
+            </label>
+
+            <label class="radio-pill">
+              <input
+                type="radio"
+                name="role"
+                id="role-founder"
+                value="founder"
+              />
+              <span>Founder</span>
+            </label>
+          </div>
+
+          <button id="save-role-btn" class="primary-button">Save Role</button>
+
+          <div class="settings-divider"></div>
+
+          <h3>Account</h3>
+          <p class="card-subtitle">
+            Signed in with Firebase Authentication. You can sign out of this
+            device at any time.
+          </p>
+          <button class="danger-button" onclick="handleLogout()">
+            Log out
+          </button>
+        </section>
+
+        <!-- Public profile -->
+        <section class="card settings-card">
+          <h2>Public Profile</h2>
+          <p class="card-subtitle">
+            This information can appear next to your pitches and interest
+            requests so others know who they’re talking to.
+          </p>
+
+          <div class="form-field">
+            <label for="profile-name">Name</label>
+            <input id="profile-name" type="text" />
+          </div>
+
+          <div class="form-field">
+            <label for="profile-headline">Headline</label>
+            <input id="profile-headline" type="text" placeholder="Early-stage founder, looking to..." />
+          </div>
+
+          <div class="form-field">
+            <label for="profile-bio">Bio</label>
+            <textarea
+              id="profile-bio"
+              rows="4"
+              placeholder="A short sentence about what you’re building or what you invest in."
+            ></textarea>
+          </div>
+
+          <div class="form-field">
+            <label for="profile-link-primary">Primary link</label>
+            <input
+              id="profile-link-primary"
+              type="url"
+              placeholder="Website, LinkedIn, or portfolio"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="profile-link-secondary">Secondary link (optional)</label>
+            <input
+              id="profile-link-secondary"
+              type="url"
+              placeholder="AngelList, Twitter/X, etc."
+            />
+          </div>
+
+          <button id="save-profile-btn" class="primary-button">
+            Save Profile
+          </button>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
 </html>
